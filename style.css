@@ -1,0 +1,82 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom right, #ff70a6, #9b4dca); /* gradient ชมพูไปม่วง */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* ความสูงเต็มหน้าจอ */
+    flex-direction: column; /* ใช้สำหรับจัดแนวตั้ง */
+}
+
+.form-container {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ff70a6; /* ขอบสีชมพูอ่อน */
+    border-radius: 10px;
+    background-color: rgba(255, 182, 193, 0.8); /* สีชมพูอ่อนที่มีความโปร่งใส */
+    backdrop-filter: blur(10px); /* ทำให้พื้นหลังเบลอ */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* เงาเล็กน้อยเพื่อเพิ่มความลึก */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* กำหนดอนิเมชั่นให้หายไป */
+    text-align: center; /* จัดข้อความให้ตรงกลาง */
+    box-sizing: border-box; /* ให้รวม padding และ border ในขนาด */
+}
+
+h2 {
+    color: #ff4f75; /* สีหัวข้อเป็นสีชมพูเข้ม */
+}
+
+input[type="password"], button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; /* ให้รวม padding และ border ในขนาด */
+    background-color: rgba(255, 255, 255, 0.8); /* ให้ช่องกรอกมีพื้นหลังโปร่งแสง */
+}
+
+input[type="password"] {
+    color: #ff4f75; /* ข้อความในช่องกรอกสีชมพูเข้ม */
+    border: 2px solid #ff4f75; /* ขอบกล่องกรอกเป็นสีชมพูเข้ม */
+}
+
+button {
+    background-color: #ff70a6; /* สีปุ่มชมพู */
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff4f75; /* เมื่อวางเมาส์จะเปลี่ยนเป็นชมพูเข้ม */
+}
+
+.mailbox {
+    display: none;
+    opacity: 0;
+    transform: translateY(100vh); /* เริ่มต้นจากด้านล่าง */
+    transition: opacity 1s ease, transform 1s ease;
+    background-color: #ffb6c1; /* สีพื้นหลังกล่องจดหมาย */
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* จัดข้อความในกล่องจดหมายให้ตรงกลาง */
+}
+
+.mailbox.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0); /* เลื่อนขึ้นมาจากด้านล่าง */
+}
+
+h3 {
+    color: #ff4f75; /* สีหัวข้อในกล่องจดหมาย */
+}
+
+p {
+    color: #ff4f75;
+}
